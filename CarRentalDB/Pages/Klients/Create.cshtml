@@ -1,0 +1,59 @@
+﻿@page
+@model CarRentalDB.Pages.Klients.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Customers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Customers.Full_name" class="control-label"></label>
+                <input asp-for="Customers.Full_name" class="form-control" />
+                <span asp-validation-for="Customers.Full_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Paul" class="control-label"></label>
+                <input asp-for="Customers.Paul" class="form-control" />
+                <span asp-validation-for="Customers.Paul" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Date_of_birth" class="control-label"></label>
+                <input asp-for="Customers.Date_of_birth" class="form-control" />
+                <span asp-validation-for="Customers.Date_of_birth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Address" class="control-label"></label>
+                <input asp-for="Customers.Address" class="form-control" />
+                <span asp-validation-for="Customers.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Phone" class="control-label"></label>
+                <input asp-for="Customers.Phone" class="form-control" />
+                <span asp-validation-for="Customers.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customers.Passport_details" class="control-label"></label>
+                <input asp-for="Customers.Passport_details" class="form-control" />
+                <span asp-validation-for="Customers.Passport_details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

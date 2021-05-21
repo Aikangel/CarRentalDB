@@ -1,0 +1,49 @@
+﻿@page
+@model CarRentalDB.Pages.RentalServices.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Rental_services</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rental_services.Date_of_issue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rental_services.Date_of_issue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rental_services.Rental_period)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rental_services.Rental_period)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rental_services.Return_Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rental_services.Return_Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rental_services.Rental_price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rental_services.Rental_price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rental_services.Payment_mark)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rental_services.Payment_mark)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Rental_services.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
